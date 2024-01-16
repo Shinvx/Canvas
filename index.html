@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Canvas</title>
+</head>
+
+<body class="stacked_linear">
+  <div>
+    <div class="header">
+      <header>
+        <section style="display:block; justify-content: center;">
+          <div class="overlay" style="display: flex; align-items:center; justify-content: center;">
+            <p>Package.json</p>
+          </div>
+        </section>
+      </header>
+    </div>
+    </div>
+    </section>
+    <script>
+      let tid = -1;
+      function reloader(rec) {
+        const ws = new WebSocket(window.location.origin.replace("http", "ws") + "/ws");
+        ws.onerror = (e) => {
+          if (rec > 10) return;
+          tid = setTimeout(() => reloader(rec + 1), 1000);
+        };
+        ws.onmessage = (e) => {
+          if (tid > -1) clearTimeout(tid);
+          tid = -1;
+          ws.close();
+          setTimeout(() => window.location.reload(), 100);
+        };
+      }
+      reloader(0);
+    </script>
+    <script src="./app.js"></script>
+</body>
+
+</html>
