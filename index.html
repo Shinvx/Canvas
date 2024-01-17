@@ -8,37 +8,58 @@
   <title>Canvas</title>
 </head>
 
-<body class="stacked_linear">
-  <div>
-    <div class="header">
-      <header>
-        <section style="display:block; justify-content: center;">
-          <div class="overlay" style="display: flex; align-items:center; justify-content: center;">
-            <p>Package.json</p>
-          </div>
+<body>
+  <div class="container">
+    <div id="headerID" class="header">
+      <header class="antiselect">
+        <section>
+          <div>Canvas</div>
+          
         </section>
       </header>
     </div>
+    <div id="asideID" class="aside antiselect">
+      <aside>
+        <section>
+          <input type="text" id="X">
+          <br>
+          <input type="text" id="Y" width="50px">
+        </section>
+      </aside>
     </div>
-    </section>
-    <script>
-      let tid = -1;
-      function reloader(rec) {
-        const ws = new WebSocket(window.location.origin.replace("http", "ws") + "/ws");
-        ws.onerror = (e) => {
-          if (rec > 10) return;
-          tid = setTimeout(() => reloader(rec + 1), 1000);
-        };
-        ws.onmessage = (e) => {
-          if (tid > -1) clearTimeout(tid);
-          tid = -1;
-          ws.close();
-          setTimeout(() => window.location.reload(), 100);
-        };
-      }
-      reloader(0);
-    </script>
-    <script src="./app.js"></script>
+    <div class="empty">
+      <div>
+        
+      </div>
+    </div>
+    <div class="main" id="maindrawID"onmousemove="coordinate(event)">
+      <section>
+        <div>
+          
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <script>
+    let tid = -1;
+    function reloader(rec) {
+      const ws = new WebSocket(window.location.origin.replace("http", "ws") + "/ws");
+      ws.onerror = (e) => {
+        if (rec > 10) return;
+        tid = setTimeout(() => reloader(rec + 1), 1000);
+      };
+      ws.onmessage = (e) => {
+        if (tid > -1) clearTimeout(tid);
+        tid = -1;
+        ws.close();
+        setTimeout(() => window.location.reload(), 100);
+      };
+    }
+    reloader(0);
+  </script>
+  <script src="./app.js"></script>
 </body>
 
 </html>

@@ -1,46 +1,59 @@
 body {
-  background: #122842;
-  height: px;
-  padding: 200px;
-  margin: auto;
+  background: white;
+  padding: 0;
+  margin: 0;
   overflow: hidden;
-  color: rgb(172, 14, 14);
+  color: silver;
   font-family: sans-serif;
   font-size: 14px;
   line-height: 25px;
 }
-
-.overlay {
-  padding-top: -400px;
-  color: red;
-  margin: auto;
-  font-size: large;
-  border-radius: 20px;
-  border-color: #122842;
-  height: 100%;
-  background-color: #122842;
-  width: auto;
-
+.container {
+  height: 100vh;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 0.0em;
+  grid-template-areas:
+    "empty header"
+    "aside main";
 }
-
-.stacked-linear {
-  background: linear-gradient(217deg,
-      rgb(255 0 0 / 80%),
-      rgb(255 0 0 / 0%) 70.71%), linear-gradient(127deg, rgb(0 255 0 / 80%), rgb(0 255 0 / 0%) 70.71%),
-    linear-gradient(336deg, rgb(0 0 255 / 80%), rgb(0 0 255 / 0%) 70.71%);
-}
-
-.htitle {
-  color: #e5e5e5;
-  font-size: 80%;
-  text-transform: uppercase;
-  height: 60px;
-  display: flex;
-  align-items: center;
+header>section {
+  color: #aa7881;
+  font-family: fantasy;
+  text-align: center;
+  font-size: 300%;
+  position: fixed;
+  background: radial-gradient(ellipse at center, #550144 0%, rgb(3, 22, 29) 100%);
+  padding: 6%;
   justify-content: center;
-
+  width: 100%;
+  top: 0;
+  right: 0;
 }
-
 .header {
   grid-area: header;
+}
+.empty {
+  grid-area: empty;
+  height: 139.13px;
+  
+}
+.aside {
+  border-color: #122842;
+  height: 100%;
+  background-color: #0f2745;
+  width: 20em;
+  padding: 10%;
+  margin-left: -200px;
+  grid-area: aside;
+}
+.main {
+  background-color: rgb(202, 206, 206);
+  grid-area: main;
+  height: auto;
+  width: auto;
+  bottom: 0;
+  right:0;
 }
