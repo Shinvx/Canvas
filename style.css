@@ -42,7 +42,7 @@ header>section {
 }
 .aside {
   border-color: #122842;
-  height: 100%;
+  height: auto;
   background-color: #0f2745;
   width: 20em;
   padding: 10%;
@@ -50,10 +50,9 @@ header>section {
   grid-area: aside;
 }
 .main {
-  background-color: rgb(202, 206, 206);
   grid-area: main;
-  height: auto;
-  width: auto;
+  height: 380px;
+  width: 753px;
   bottom: 0;
   right:0;
 }

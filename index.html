@@ -32,16 +32,15 @@
 
       </div>
     </div>
-    <div class="main" id="maindrawID" onmousemove="coordinate(event)">
+    <div class="main" id="maindrawID">
+      <div width="752px" height="379px">
       <section>
-        <div>
-          <canvas id="canvasID" width="753px" height="auto"></canvas>
-        </div>
+        <canvas id="canvasID" width="752px" height="379px" onmousedown="coordinate(event)"></canvas>
       </section>
-
+    </div> 
     </div>
   </div>
-
+  
   <script>
     let tid = -1;
     function reloader(rec) {

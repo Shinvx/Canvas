@@ -42,42 +42,39 @@ class MousePosition {
 }
 
 function coordinate(event) {
-  let x = event.clientX ; //270 1023 
-  let y = event.clientY ;//150 524
-  document.body.appState.mousePoX = x;
-  yi.value = y;
-}
-
-//onmousedown ?
-function pen(e, color) {
+  let x = event.clientX; //270 1023 
+  let y = event.clientY;//150 524
   
-}
+  yi.value = y;
 
+  draw(x, y);
+}
 document.body.appState = new MousePosition(xi);
 
 
 document.body.addEventListener("poschanged", (ev) => {
 
-  console.info("x: "+ev.detail.x);
+  console.info("x: " + ev.detail.x);
 });
 
-//19
 let canvas = document.getElementById("canvasID");
 let ctx = canvas.getContext("2d");
 
 function draw(x, y) {
+  
   ctx.strokeStyle = "black";
-  ctx.lineWidth = 2;
+  ctx.lineWidth = 100;
 
   ctx.beginPath();
-  ctx.arc(x, y, 5, 0, 2 * Math.PI);
-  ctx.lineTo(x + 10, y + 10);
+  ctx.lineWidth = 10;
+  ctx.lineCap = 'round';
+  
+  ctx.strokeStyle = 'black';
+  
+  ctx.moveTo(x, y);
+
+  let xk = document.body.appState.mousePoX = x;
+  let yk = document.body.appState.mousePoY = y;
+  ctx.lineTo(xk, yk);
   ctx.stroke();
-}
-
-function coordinate(event) {
-  let x = event.clientX;
-  let y = event.clientY;
-
-  draw(x, y);
 }
