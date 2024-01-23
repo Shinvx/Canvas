@@ -60,3 +60,24 @@ document.body.addEventListener("poschanged", (ev) => {
 
   console.info("x: "+ev.detail.x);
 });
+
+//19
+let canvas = document.getElementById("canvasID");
+let ctx = canvas.getContext("2d");
+
+function draw(x, y) {
+  ctx.strokeStyle = "black";
+  ctx.lineWidth = 2;
+
+  ctx.beginPath();
+  ctx.arc(x, y, 5, 0, 2 * Math.PI);
+  ctx.lineTo(x + 10, y + 10);
+  ctx.stroke();
+}
+
+function coordinate(event) {
+  let x = event.clientX;
+  let y = event.clientY;
+
+  draw(x, y);
+}
