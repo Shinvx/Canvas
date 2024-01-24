@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <title>Canvas</title>
 </head>
 
@@ -20,25 +21,51 @@
     </div>
     <div id="asideID" class="aside antiselect">
       <aside>
-        <section>
-          <input type="text" id="X">
-          <br>
-          <input type="text" id="Y" width="50px">
-        </section>
+        <form oninput="result.value=parseInt(draWID.value)"><ul class="sidenav">
+          <li>
+            <input type="text" id="X">
+          </li>
+          <li>
+            <input type="text" id="Y">
+          </li>
+          <li>
+            <input type="color" id="colorpicker" value="#0000ff">
+          </li>
+          <li>
+            <input type="range" list="markers" id="draWID" name="draWID" step="25"><output name="result" for="draWID">100</output>
+            <datalist id="markers">
+              <option value="0" label="0" ></option>
+              <option value="25" label="25"></option>
+              <option value="50" label="50"></option>
+              <option value="75"label="75"></option>
+              <option value="100"label="100"></option>
+            </datalist>          
+          </li>
+          <li class="material-symbols-outlined">
+            <ul>
+              <li>
+                <input type="button" id="circleID" class="material-symbols-outlined" value="radio_button_unchecked">
+              </li>
+              <li>
+                <input type="button" id="rectangleID" class="material-symbols-outlined" value="check_box_outline_blank">
+              </li>
+              <li>
+                <input type="button" id="triangleID" class="material-symbols-outlined" value="change_history">
+              </li>
+              <li>
+                <input type="button" id="triangleID" class="material-symbols-outlined" value="edit">
+              </li>
+              <li>
+                <input type="button" id="triangleID" class="material-symbols-outlined" value="call">
+              </li>
+            </ul>              
+          </li>
+        </ul></form>
       </aside>
     </div>
-    <div class="empty">
-      <div>
 
-      </div>
-    </div>
-    <div class="main" id="maindrawID" onmousemove="coordinate(event)">
-      <section>
-        <div>
-          <canvas id="canvasID" width="753px" height="auto"></canvas>
-        </div>
-      </section>
-
+    <div class="main" id="maindrawID">
+      <canvas id="canvasID" width="752px" height="379px"></canvas>
     </div>
   </div>
 

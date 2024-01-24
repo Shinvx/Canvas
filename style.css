@@ -1,5 +1,5 @@
 body {
-  background: white;
+  background: rgb(190, 188, 188);
   padding: 0;
   margin: 0;
   overflow: hidden;
@@ -10,13 +10,14 @@ body {
 }
 .container {
   height: 100vh;
+  width: 100vw;
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: auto 1fr;
   grid-template-rows: auto 1fr;
   gap: 0.0em;
   grid-template-areas:
-    "empty header"
+    "header header"
     "aside main";
 }
 header>section {
@@ -24,36 +25,56 @@ header>section {
   font-family: fantasy;
   text-align: center;
   font-size: 300%;
-  position: fixed;
+  line-height: 300%;
   background: radial-gradient(ellipse at center, #550144 0%, rgb(3, 22, 29) 100%);
-  padding: 6%;
-  justify-content: center;
   width: 100%;
-  top: 0;
-  right: 0;
 }
 .header {
   grid-area: header;
+  height: 100%;
 }
 .empty {
   grid-area: empty;
-  height: 139.13px;
   
 }
 .aside {
   border-color: #122842;
-  height: 100%;
+  height: auto;
   background-color: #0f2745;
   width: 20em;
-  padding: 10%;
-  margin-left: -200px;
+  margin-left: -100%;
   grid-area: aside;
 }
 .main {
-  background-color: rgb(202, 206, 206);
   grid-area: main;
-  height: auto;
+
+}
+.sidenav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+}
+.sidenav>li {
+  padding: 0;
+  margin: auto;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+ul, li {
+    list-style: none;
+}
+datalist {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  writing-mode: vertical-lr;
   width: auto;
-  bottom: 0;
-  right:0;
+  text-align: end;
 }
