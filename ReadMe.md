@@ -14,4 +14,8 @@ Note: Triangle does not work for now.
 [ctrl + alt + R]: Select Rectangle. <br>
 [ctrl + alt + C]: Select Circle. <br>
 
+## Function
+
+### Pen
+
 
