@@ -15,7 +15,13 @@ Note: Triangle does not work for now.
 [ctrl + alt + C]: Select Circle. <br>
 
 ## Function
-First of all we want to add Function for the Canvas menu to be able to dom that, we need to start to handle the mposue event
+First of all we want to add Function for the Canvas menu to be able to dom that, we need to start to handle the mouse event. <br>
+For example we want to catch the event if we move inside the Canvas or not for that we can use the EventListener.
+To create one we need the element from our index.html, to be able to do that we need to get the ID from our element and store it in our variable
+for Example:
+```js
+let canvas = document.querySelector('#yourID');
+```
 ### Pen
 
 ```js
