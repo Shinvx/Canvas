@@ -13,7 +13,7 @@ This canvas application allows users to draw shapes, lines, and fill colors on a
 
 ## Function Description
 
-- `fillDrawHandler`: This function handles the fill color option. It toggles the active class for the selected fill color button.
+- `fillDrawHandler`: This function handles the fill color option. It toggles the active class for the selected fill color button. <span style="color:red">- Not in Use, alternative Solution</span>.
 - `main`: This is the main function that initializes the canvas, sets up event listeners, and handles the drawing process.
 
 Note: Triangle does not work for now.
@@ -24,7 +24,7 @@ Note: Triangle does not work for now.
 2. Set up the drawing context for the canvas.
 3. Set up event listeners for the drawing tools and fill color options.
 4. Initialize the `saved_arr` array to store the canvas's image data at different stages of drawing.
-5. Set up the function to handle the fill color option.
+5. Set up the `fillDrawHandler` function to handle the fill color option. <span style="color:red">- Not in Use, alternative Solution</span>.
 6. Set up the `main` function to handle the drawing process.
 7. In the `main` function, set up a flag `is_drawing` to track whether the user is currently drawing.
 8. Set up an array `saved_arr` to store the canvas's image data at different stages of drawing.
