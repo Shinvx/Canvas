@@ -1,7 +1,5 @@
 # Canvas
 
-# Canvas with JavaScript
-
 This canvas application allows users to draw shapes, lines, and fill colors on a canvas. It also provides options to undo, redo, clear, and download the drawn content.
 
 ## HotKeys 
