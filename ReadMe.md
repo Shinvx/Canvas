@@ -7,11 +7,11 @@ It is About the Canvas from Javascript with pen, rectangle, triangle and square.
 
 Note: Triangle does not work for now.
 
-## HotKeys \n
-[ctrl + Z]: Undo to the last checkpoint.
-[ctrl + Y]: Redo to the last checkpoint.
-[ctrl + alt + P]: Select Pen.
-[ctrl + alt + R]: Select Rectangle.
-[ctrl + alt + C]: Select Circle. 
+## HotKeys 
+[ctrl + Z]: Undo to the last checkpoint. /n
+[ctrl + Y]: Redo to the last checkpoint. /n
+[ctrl + alt + P]: Select Pen. /n
+[ctrl + alt + R]: Select Rectangle. /n
+[ctrl + alt + C]: Select Circle. /n
 
 
