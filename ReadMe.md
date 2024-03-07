@@ -16,7 +16,7 @@ Note: Triangle does not work for now.
 
 ## Function
 ### Pen
-``js
+```js
 ev.currentTarget.classList.toggle("active");
         console.info(ev.currentTarget);
         canvas.addEventListener("mousedown", pen_start);
