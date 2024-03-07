@@ -13,7 +13,7 @@ This canvas application allows users to draw shapes, lines, and fill colors on a
 
 ## Function Description
 
-- `fillDrawHandler`: This function handles the fill color option. It toggles the active class for the selected fill color button. <span style="color:red"> ❗Not in Use, alternative Solution❗</span>.
+- `fillDrawHandler`: This function handles the fill color option. It toggles the active class for the selected fill color button.<br> <span style="color:red"> ❗Not in Use, alternative Solution❗</span>.
 - `main`: This is the main function that initializes the canvas, sets up event listeners, and handles the drawing process.
 
 Note: Triangle does not work for now.
