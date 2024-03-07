@@ -16,6 +16,8 @@ This canvas application allows users to draw shapes, lines, and fill colors on a
 - `fillDrawHandler`: This function handles the fill color option. It toggles the active class for the selected fill color button.
 - `main`: This is the main function that initializes the canvas, sets up event listeners, and handles the drawing process.
 
+Note: Triangle does not work for now.
+
 ## Step by Step Guide
 
 1. Initialize the canvas and set its dimensions to the window's inner width and a fixed height.
