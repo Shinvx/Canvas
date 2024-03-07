@@ -1,80 +1,56 @@
 body {
-  background: rgb(190, 188, 188);
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
-  color: silver;
-  font-family: sans-serif;
-  font-size: 14px;
-  line-height: 25px;
+    margin: 0px;
+    padding: 30px;
+    font-family: "Mukta";
+    overflow: hidden;
+    background: #313131;
 }
-.container {
-  height: 100vh;
-  width: 100vw;
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: auto 1fr;
-  gap: 0.0em;
-  grid-template-areas:
-    "header header"
-    "aside main";
+canvas {
+    box-shadow: -3px 2px 9px 6px black;
+    cursor: pointer;
 }
-header>section {
-  color: #aa7881;
-  font-family: fantasy;
-  text-align: center;
-  font-size: 300%;
-  line-height: 300%;
-  background: radial-gradient(ellipse at center, #550144 0%, rgb(3, 22, 29) 100%);
-  width: 100%;
+.tools {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 15px;
 }
-.header {
-  grid-area: header;
-  height: 100%;
+
+.tools .button {
+    align-self: center;
+    width: 100px;
+    height: 40px;
+    border: 2px solid rgb(210, 20, 20);
+    color: white;
+    background: #222;
+    font-weight: bold;
+    margin: 0 15px;
 }
-.empty {
-  grid-area: empty;
+.color-picker {
+    align-self: center;
+    margin: 0 10px;
+    height: 50px;
+    border: 2px solid rgb(210, 20, 20);
+}
+input[type="range"] {
+    background: transparent;
+    cursor: pointer;
+    width: 25rem;
+    align-self: center;
+  }
   
-}
-.aside {
-  border-color: #122842;
-  height: auto;
-  background-color: #0f2745;
-  width: 20em;
-  margin-left: -100%;
-  grid-area: aside;
-}
-.main {
-  grid-area: main;
-
-}
-.sidenav {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-
-}
-.sidenav>li {
-  padding: 0;
-  margin: auto;
-}
-
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
-}
-ul, li {
-    list-style: none;
-}
-datalist {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  writing-mode: vertical-lr;
-  width: auto;
-  text-align: end;
-}
+  input[type="range"]:focus {
+    outline: none;
+    outline-color: red;
+  }
+  .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+  }
+  .tools .active {
+    background-color: #535456;
+    border: 2px solid white;
+  }
