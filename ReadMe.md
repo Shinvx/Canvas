@@ -4,6 +4,13 @@
 
 This canvas application allows users to draw shapes, lines, and fill colors on a canvas. It also provides options to undo, redo, clear, and download the drawn content.
 
+## HotKeys 
+[ctrl + Z]: Undo to the last checkpoint. <br>
+[ctrl + Y]: Redo to the last checkpoint. <br>
+[ctrl + alt + P]: Select Pen. <br>
+[ctrl + alt + R]: Select Rectangle. <br>
+[ctrl + alt + C]: Select Circle. <br>
+
 ## Function Description
 
 - `fillDrawHandler`: This function handles the fill color option. It toggles the active class for the selected fill color button.
@@ -51,11 +58,6 @@ Here is an example of how to separate the JavaScript code into a separate file:
    ```html
    <script src="canvas.js"></script>
    ```
+   This will ensure that the JavaScript code is loaded and executed correctly when the HTML file is loaded in a web browser.
 
-## HotKeys 
-[ctrl + Z]: Undo to the last checkpoint. <br>
-[ctrl + Y]: Redo to the last checkpoint. <br>
-[ctrl + alt + P]: Select Pen. <br>
-[ctrl + alt + R]: Select Rectangle. <br>
-[ctrl + alt + C]: Select Circle. <br>
 
