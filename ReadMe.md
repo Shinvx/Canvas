@@ -15,15 +15,18 @@ Note: Triangle does not work for now.
 [ctrl + alt + C]: Select Circle. <br>
 
 ## Function
+First of all we want to add Function for the Canvas menu to be able to dom that, we need to start to handle the mposue event
 ### Pen
+
 ```js
-ev.currentTarget.classList.toggle("active");
-        console.info(ev.currentTarget);
+
         canvas.addEventListener("mousedown", pen_start);
         canvas.addEventListener("mousemove", pen_draw);
 
         canvas.addEventListener("mouseup", pen_stop);
         canvas.addEventListener("mouseout", pen_stop);
+```
+```js
         function pen_start(event) {
 
           is_drawing = true;
